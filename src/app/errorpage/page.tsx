@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ErrorPage() {
   return (
     <div className="">
-        <div className="relative w-screen h-[410px] bg-gray-100">
+        <div className="relative w-screen h-[150px] bg-gray-100">
       {/* Background Image with 30% Opacity */}
       <div className="absolute inset-0 opacity-60">
         <Image

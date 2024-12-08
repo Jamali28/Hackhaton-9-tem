@@ -19,8 +19,8 @@ export default function Hero(){
 
            
 </div>
-  <button className="bg-yellow-500 sm:hidden w-190 md:block sm:px-3 md:px-7 sm:text-sm py-0 text-gray-400 rounded-full h-10 ">See Menu</button>
-  </div>
+ <a href="/menu"> <button className="bg-yellow-500 sm:hidden w-190 md:block sm:px-3 md:px-7 sm:text-sm py-0 text-gray-400 rounded-full h-10 ">See Menu</button>
+  </a></div>
 
 {/* image */}
 <div className="sm-w-full md:w-[30%] lg:w-[30%] pl-7 justify-center items-center flex flex-row">

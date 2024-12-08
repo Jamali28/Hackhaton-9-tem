@@ -6,30 +6,28 @@ import { FaApple } from "react-icons/fa";
 
 export default function SigninPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div
-        className="w-full  bg-no-repeat bg-center flex justify-center"
-        style={{
-          backgroundImage: "url('/unsplash.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          width: '100%',
-          height: '300px',
-        }}
-      >
-        {/* Header Section */}
-        <div className="w-full max-w-5xl flex flex-col justify-center items-center text-white mb-10">
-        <p className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center">404 Error</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
-            <p className="text-xl sm:text-2xl md:text-3xl text-[20px]">Home</p>
-            <div className="flex items-center">
-              <Image src="/Vector.png" width={10} height={10} alt="Vector Icon" />
-              <p className="ml-2 text-xl sm:text-2xl md:text-3xl text-[#FF9F0D]   text-[20px]">404</p>
-            </div>
-          </div>
-        </div>
+ 
+    <div className="relative w-screen h-[150px] bg-gray-100">
+      {/* Background Image with 30% Opacity */}
+      <div className="absolute inset-0 opacity-60">
+        <Image
+          src="/img.png"
+          alt="background"
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
 
+      {/* Centered Content */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[popins] text-yellow-500  px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 lg:py-8 
+         text-center">
+          Our Chefs
+        </h1>
+        
+     </div>
+    
+    
       {/* Signin Form Section */}
       <section className="py-16 relative bg-white">
         <div className="container mx-auto max-w-md bg-white shadow-lg rounded-md p-8">
@@ -103,6 +101,6 @@ export default function SigninPage() {
           </div>
         </div>
       </section>
-    </div>
+   </div>
   );
 }
