@@ -2,6 +2,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const initialCartItems = [
   { name: "Burger", price: 10.99, quantity: 2, image: "/burger.jpg" },
@@ -41,7 +42,7 @@ const ShoppingCart: React.FC = () => {
 
   return (
 
-    <div className="relative w-screen h-[150px] bg-gray-100">
+    <div className="relative w-screen h-[250px] bg-black">
       {/* Background Image with 30% Opacity */}
       <div className="absolute inset-0 opacity-60">
         <Image
@@ -52,14 +53,23 @@ const ShoppingCart: React.FC = () => {
         />
       </div>
 
+     
       {/* Centered Content */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[popins] text-yellow-500  px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-6 lg:py-8 
-         text-center">
-          Cart Items
-        </h1>
-        
-     </div> 
+     
+      <section
+        className="bg-cover bg-center h-64 flex items-center justify-center"
+        >
+          <div className="text-center text-white">
+            <h2 className="text-4xl font-bold">Add to Cart</h2>
+            <p className="mt-4">
+              <Link href="/" className="text-yellow-400">Home</Link> &gt; CartItems
+            </p>
+          </div>
+        </section>
+
+
+
+    
 
 
 
@@ -67,7 +77,7 @@ const ShoppingCart: React.FC = () => {
 
 
     <div className="bg-white font-sans ">
-      <header className="bg-cover bg-center h-48 flex items-center justify-center" style={{ backgroundImage: 'url(/path/to/header-bg.jpg)' }}>
+      <header className="bg-cover bg-center h-48 flex items-center justify-center">
         <h1 className="text-5xl font-bold text-white tracking-wide  ">Shopping Cart</h1>
       </header>
       <main className="py-12 px-6 md:px-16 lg:px-28">

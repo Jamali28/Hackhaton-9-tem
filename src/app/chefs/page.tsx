@@ -22,7 +22,7 @@ const ChefGrid = () => {
        <div>
 
 
-<div className="relative w-screen h-[150px] bg-gray-100">
+<div className="relative w-screen h-[150px] bg-black">
       {/* Background Image with 30% Opacity */}
       <div className="absolute inset-0 opacity-60">
         <Image

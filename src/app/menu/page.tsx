@@ -3,7 +3,7 @@ import Image from 'next/image';
 const MenuPage: React.FC = () => {
   return (
     
-    <div className="relative w-screen h-[150px] bg-gray-100">
+    <div className="relative w-screen h-[150px] bg-black">
     {/* Background Image with 30% Opacity */}
     <div className="absolute inset-0 opacity-60">
       <Image
@@ -131,9 +131,9 @@ const MenuPage: React.FC = () => {
                 </div>
                 <div className="mt-16 ml-16">
                     <Image
-                    src={"/coffee.jpg"}
+                    src={"/coffe.jpg"}
                     alt="Drink"
-                    width={448}
+                    width={548}
                     height={628}/>
                 </div>
             </div>

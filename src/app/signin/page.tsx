@@ -6,17 +6,17 @@ import { FaApple } from "react-icons/fa";
 
 export default function SigninPage() {
   return (
- 
-    <div className="relative w-screen h-[150px] bg-gray-100">
-      {/* Background Image with 30% Opacity */}
-      <div className="absolute inset-0 opacity-60">
-        <Image
-          src="/img.png"
-          alt="background"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+    <div>
+    <div className="relative w-screen h-[150px] bg-black">
+    {/* Background Image with 30% Opacity */}
+    <div className="absolute inset-0 opacity-60">
+      <Image
+        src="/img.png"
+        alt="background"
+        layout="fill"
+        objectFit="cover"
+      />
+    </div>
 
       {/* Centered Content */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -102,5 +102,6 @@ export default function SigninPage() {
         </div>
       </section>
    </div>
+ </div>
   );
 }

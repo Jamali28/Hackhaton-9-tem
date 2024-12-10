@@ -1,21 +1,68 @@
-const ChefBanner = () => {
-    return (
-      <div
-        className="relative h-72 md:h-96 flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/Hero1.png')" }}
-      >
-        <div className="text-center text-white px-4 md:px-8">
-          <h1 className="text-3xl md:text-4xl font-bold">Our Chef</h1>
-          <nav className="mt-2 text-xs md:text-sm">
-            <a href="/" className="text-gray-300 hover:text-yellow-500">
-              Home
-            </a>
-            <span className="mx-2 text-yellow-500">{'>'}</span>
-            <span className="text-yellow-500">Chef</span>
-          </nav>
+import React from "react";
+import Image from "next/image";
+
+function Ourchefs() {
+  return (
+    <>
+      <section className="bg-black md:px-[135px] py-[50px]">
+        <div className="flex flex-col justify-center items-center text-center">
+          <h1 className="md:text-[32px] text-[24px] font-normal text-[#FF9F0D] font-whitespace-nowrap font-greatVibes">
+            Chefs
+          </h1>
+          <h1 className="text-[20px] text-white md:text-[50px] font-bold whitespace-nowrap md:whitespace-normal">
+            <span className="text-[#FF9F0D]">Me</span>et Our Chef
+          </h1>
         </div>
-      </div>
-    );
-  };
-  
-  export default ChefBanner;
+
+        {/* Missing Images Explanation */}
+        <div className="text-white text-center mt-6 mb-10">
+          <p className="text-lg">
+            Due to some technical constraints, the images of our talented chefs
+            are currently unavailable. However, we still wanted to introduce you
+            to them. Once the images are ready, they will be displayed here. Stay tuned!
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-[20px] mt-[50px]">
+          {/* Chef 1 */}
+          <div className="relative w-[200px] md:w-[305px] md:h-[280px]  cursor-pointer group">
+            <Image src={"/pic3.jpg"} alt="" width={250} height={50}/>
+            {/* Hover effect text */}
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-xl font-semibold">Chef 1</p>
+            </div>
+          </div>
+
+          {/* Chef 2 */}
+          <div className="relative w-[200px] md:w-[280px] md:h-[280px]  cursor-pointer group">
+          <Image src={"/pic5.jpg"} alt="" width={250} height={50}/>
+            {/* Hover effect text */}
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-xl font-semibold">Chef 2</p>
+            </div>
+          </div>
+
+          {/* Chef 3 */}
+          <div className="relative w-[200px] md:w-[280px] md:h-[280px]  cursor-pointer group">
+          <Image src={"/pic2.jpg"} alt="" width={250} height={50}/>
+            {/* Hover effect text */}
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-xl font-semibold">Chef 3</p>
+            </div>
+          </div>
+
+          {/* Chef 4 */}
+          <div className="relative w-[200px] md:w-[280px] md:h-[280px]  cursor-pointer group">
+          <Image src={"/pic7.jpg"} alt="" width={250} height={50}/>
+            {/* Hover effect text */}
+            <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white text-xl font-semibold">Chef 4</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default Ourchefs;
