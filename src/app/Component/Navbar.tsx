@@ -33,7 +33,7 @@ export default function Navbar() {
             <a href="/blog" className="hover:text-orange-500 transition">
               Blog
             </a>
-            <a href="/pages" className="hover:text-orange-500 transition">
+            <a href="/chefs" className="hover:text-orange-500 transition">
               Pages
             </a>
             <a href="/about" className="hover:text-orange-500 transition">
@@ -81,16 +81,16 @@ export default function Navbar() {
       >
         {/* Navigation Links */}
         <div className="flex flex-col space-y-4">
-          <a href="#home" className="hover:text-orange-500 transition">
+          <a href="/" className="hover:text-orange-500 transition">
             Home
           </a>
-          <a href="#menu" className="hover:text-orange-500 transition">
+          <a href="/menu" className="hover:text-orange-500 transition">
             Menu
           </a>
-          <a href="#blog" className="hover:text -orange-500 transition">
+          <a href="/blog" className="hover:text -orange-500 transition">
             Blog
           </a>
-          <a href="#pages" className="hover:text-orange-500 transition">
+          <a href="/chefs" className="hover:text-orange-500 transition">
             Pages
           </a>
           <a href="/about" className="hover:text-orange-500 transition">

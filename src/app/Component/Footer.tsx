@@ -79,35 +79,35 @@ const Footer = () => {
             </h2>
             <ul className="text-[#FFFFFF] font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/about" className="hover:underline">
                   About
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  News
+                <a href="/signin" className="hover:underline">
+                  Sign up
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Partner
+                <a href="/faq" className="hover:underline">
+                  FAQ
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/chefs" className="hover:underline">
                   Team 
                 </a>
               </li>
 
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/menu" className="hover:underline">
                 Menu
                 </a>
               </li> 
 
               <li className="mb-4">
-                <a href="#" className="hover:underline">
-                Contact
+                <a href="/cartitem" className="hover:underline">
+                Cart
                 </a>
               </li> 
             </ul>
@@ -118,28 +118,28 @@ const Footer = () => {
             </h2>
             <ul className="text-[#FFFFFF] font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/faq" className="hover:underline">
                   FAQ
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/error" className="hover:underline">
                 Term & conditions
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                 Reporting
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/blog" className="hover:underline">
                 Documentation 
                 </a>
               </li>
 
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a href="/" className="hover:underline">
                 Support Policy
                 </a>
               </li> 

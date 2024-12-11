@@ -3,14 +3,14 @@ import Image from 'next/image';
 // import Image from "next/image"; // Commented out until the image is available
 
 const menuItems = [
-  { name: 'Lettuce Leaf', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/let.jpg' },
-  { name: 'Fresh Breakfast', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '14.5$', image: '/menu2.jpg' },
-  { name: 'Mild Butter', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/about2.jpg' },
-  { name: 'Fresh Bread', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/about3.jpg' },
-  { name: 'Glow Cheese', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/about4.jpg' },
-  { name: 'Italian Pizza', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '14.5$', image: '/about5.jpg' },
-  { name: 'Slice Beef', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/about6.jpg' },
-  { name: 'Mushroom Pizza', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: '/tikka.jpg' },
+  { name: 'Lettuce Leaf', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/let.jpg" },
+  { name: 'Fresh Breakfast', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '14.5$', image: "/menu2.jpg" },
+  { name: 'Mild Butter', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/about2.jpg" },
+  { name: 'Fresh Bread', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/about3.jpg" },
+  { name: 'Glow Cheese', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/about4.jpg" },
+  { name: 'Italian Pizza', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '14.5$', image: "/about5.jpg" },
+  { name: 'Slice Beef', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/about6.jpg" },
+  { name: 'Mushroom Pizza', description: 'Lacus nisl, et ac dapibus velit in consequat.', price: '12.5$', image: "/tikka.jpg" },
 ];
 
 const MenuCom = () => {
@@ -38,7 +38,7 @@ const MenuCom = () => {
           {/* Left Section: Decorative Image */}
           <div className="hidden lg:block w-1/3 md:w-[50%]">
             {/* Image component will work once you have the image in the proper path */}
-             <Image src={"/let.jpg"} alt="Menu Decor" width={450} height={350} layout="responsive" /> 
+             <Image src={"/let.jpg"} alt="Menu Decor" width={350} height={350} layout="responsive" /> 
           </div>
 
           {/* Right Section: Menu Items */}
