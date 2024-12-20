@@ -1,69 +1,75 @@
-import Image from "next/image"; 
+import Image from "next/image";
 import { IoPlayOutline } from "react-icons/io5";
+
 const Home = () => {
   return (
     <>
-      {/* Left  */}
-      <section className="flex flex-row-2 ml-5 bg-black px-[135px]"></section>  {/* right */}
-        <div className="bg-black">
-          <div className="mt-[50]">
-            <div>
-            <h3 className="text-[#FF9F0D] text-2xl ml-8  mb-[35]">Why Choose us</h3>
-            <h1 className="text-white text-6xl font-bold mb-7 ">
-              <span className="text-[#FF9F0D] ml-8">Ex</span>tra ordinary taste
-              <br /> And Experienced{" "}
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row bg-black p-5 md:px-20 lg:px-36">
+        <div className="w-full md:w-1/2 text-white">
+          <div className="mt-10 md:mt-16">
+            <h3 className="text-[#FF9F0D] text-lg md:text-2xl mb-4">
+              Why Choose Us
+            </h3>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-5">
+              <span className="text-[#FF9F0D]">Ex</span>traordinary Taste
             </h1>
-            <p className="text-gray-200 mb-14 ml-8 text-xl">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-7">
+              And Experienced
+            </h1>
+            <p className="text-gray-300 mb-8 text-base md:text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              diam
-              <br /> pellentesque bibendum non dui volutpat fringilla bibendum.
-              Urna, elit <br /> augue urna, vitae feugiat pretium donec id
-              elementum. Ultrices mattis <br /> sed vitae mus risus. Lacus nisi,
-              et ac dapibus sit eu velit in <br /> consequat.
+              diam pellentesque bibendum non dui volutpat fringilla bibendum.
+              Urna, elit augue urna, vitae feugiat pretium donec id elementum.
+              Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit
+              eu velit in consequat.
             </p>
 
-            <div className="flex justify-center md:justify-start ml-8 space-x-4">
-             <a href="/foodCatogary">
-             <button className="inline-flex text-white bg-orange-400 border-0 py-2 px-3 focus:outline-none rounded text-lg">
-                Show More
-              </button></a>
-              <button className="ml-4 inline-flex text-white border-0 py-2 px-3 focus:outline-none rounded text-lg">
-                <IoPlayOutline className="mr-2 text-white" /> {/* Icon on the left */}
-                Watch video
+            <div className="flex flex-col sm:flex-row sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+              <a href="/foodCatogary">
+                <button className="text-white bg-orange-400 py-2 px-6 rounded text-lg focus:outline-none">
+                  Show More
+                </button>
+              </a>
+              <button className="flex items-center text-white py-2 px-6 border-2 border-white rounded text-lg focus:outline-none">
+                <IoPlayOutline className="mr-2" />
+                Watch Video
               </button>
             </div>
-
-            </div>
-
-            
-
-             
-             <div className="grid grid-cols-2  ml-28 mt-6">
-          <Image 
-            src={"/about2.jpg"} 
-            alt="About Us Image 2" 
-            width={100}
-            height={100}
-            className="rounded-lg object-cover w-[450px] h-[150px] sm:h-[200px] md:h-[250px]" 
-          />
-          <Image 
-            src={"/about3.jpg"} 
-            alt="About Us Image 3" 
-            width={100}
-            height={100}
-            className="rounded-lg object-cover w-[450px] h-[150px] sm:h-[200px] md:h-[250px]" 
-          /> </div>
-          <div  className="flex justify-center py-3">
-            <Image
-              src={"/food1.jpg"}
-              alt="experience"
-              width={374}
-              height={93}
-              className="flex justify-center rounded-lg"
-            /></div>
           </div>
         </div>
-      
+
+        {/* Images Section */}
+        <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/about2.jpg"
+              alt="About Us Image 2"
+              width={450}
+              height={300}
+              className="rounded-lg object-cover w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px]"
+            />
+            <Image
+              src="/about3.jpg"
+              alt="About Us Image 3"
+              width={450}
+              height={300}
+              className="rounded-lg object-cover w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <div className="flex justify-center py-5 bg-black">
+        <Image
+          src="/food1.jpg"
+          alt="Experience"
+          width={600}
+          height={300}
+          className="rounded-lg object-cover max-w-full"
+        />
+      </div>
     </>
   );
 };

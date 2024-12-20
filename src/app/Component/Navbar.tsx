@@ -1,10 +1,8 @@
 "use client";
 
-
 import { useState } from "react";
 import { FaMagnifyingGlass } from "react-icons/fa6"; // Magnifying Glass Icon
-import { PiUserBold } from "react-icons/pi"; // User Icon
-import { PiHandbagBold } from "react-icons/pi"; // Shopping Bag Icon
+import { PiUserBold, PiHandbagBold } from "react-icons/pi"; // User & Shopping Bag Icons
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,18 +10,39 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <nav className="bg-black text-white shadow-md">
-      <div className="container mx-auto px-6 lg:px-12 py-4 flex justify-between items-center gap-20">
+      <div className="container mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold">
           Food<span className="text-orange-500">tuck</span>
         </a>
 
+        {/* Icons for Small Screens */}
+        <div className="lg:hidden flex items-center space-x-4">
+          <div className="text-white text-xl hover:text-orange-500 transition">
+            <FaMagnifyingGlass />
+          </div>
+          <div className="text-white text-xl hover:text-orange-500 transition">
+            <PiUserBold />
+          </div>
+          <div className="text-white text-xl hover:text-orange-500 transition">
+            <PiHandbagBold />
+          </div>
+          {/* Hamburger Menu */}
+          <div
+            className="text-2xl cursor-pointer ml-4"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? "✕" : "≡"}
+          </div>
+        </div>
+
         {/* Large Screen Navigation */}
         <div className="hidden lg:flex items-center justify-between flex-1 ml-8">
           {/* Navigation Links */}
-          <div className="flex space-x-6 ">
+          <div className="flex space-x-6">
             <a href="/" className="hover:text-orange-500 transition">
               Home
             </a>
@@ -47,31 +66,20 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Icons and Search */}
+          {/* Icons */}
           <div className="flex items-center ml-8 space-x-4">
-            {/* Search Icon */}
             <div className="text-white text-xl hover:text-orange-500 transition">
               <FaMagnifyingGlass />
             </div>
-
-            {/* User Icon */}
             <div className="text-white text-xl hover:text-orange-500 transition">
               <PiUserBold />
             </div>
-
-            {/* Shopping Bag Icon */}
             <div className="text-white text-2xl hover:text-orange-500 transition">
               <PiHandbagBold />
             </div>
-            </div>
           </div>
         </div>
-
-        {/* Hamburger Icon (Small Screens) */}
-        <div className="lg:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
-          {isMenuOpen ? "✕" : "≡"}
-        </div>
-    
+      </div>
 
       {/* Collapsible Menu for Small Screens */}
       <div
@@ -87,14 +95,15 @@ export default function Navbar() {
           <a href="/menu" className="hover:text-orange-500 transition">
             Menu
           </a>
-          <a href="/blog" className="hover:text -orange-500 transition">
+          <a href="/blog" className="hover:text-orange-500 transition">
             Blog
           </a>
           <a href="/chefs" className="hover:text-orange-500 transition">
             Pages
           </a>
           <a href="/about" className="hover:text-orange-500 transition">
-            About  </a>
+            About
+          </a>
           <a href="/shop" className="hover:text-orange-500 transition">
             Shop
           </a>
@@ -102,29 +111,7 @@ export default function Navbar() {
             Contact
           </a>
         </div>
-
-        {/* Icons and Search (Small Screens) */}
-        <div className="flex items-center space-x-4">
-          {/* Search Icon */}
-          <div className="text-white text-2xl hover:text-orange-500 transition">
-            <FaMagnifyingGlass />
-          </div>
-
-          {/* User Icon */}
-          <div className="text-white text-2xl hover:text-orange-500 transition">
-            <PiUserBold />
-          </div> 
-                    {/* Shopping Bag Icon */}
-                    <div className="text-white text-2xl hover:text-orange-500 transition">
-            <PiHandbagBold />
-            <p></p>
-          </div>
-        </div>
       </div>
-    
- </nav> 
-  );
+    </nav>
+  );
 }
-
-
-
